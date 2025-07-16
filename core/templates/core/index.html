@@ -1,0 +1,282 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static '/static/js/script.js' %}"></script>
+<img src="{% static '/static/images/logo.png' %}" alt="Logo">
+{% comment %} <link rel="icon" type="image/png" href="{% static 'images/Novaro_Icon.png' %}" /> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novaro Systems | Futuristic Digital Team</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="image/png" href="{% static 'images/Novaro_Icon.png' %}" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo"><img src="/static/images/logo.png" alt="Agency Logo" style="height:100px; width:auto; display:block;"></div>
+      <button class="hamburger" aria-label="Open navigation" style="display:none;"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About us</a></li>
+        <li><a href="{% url 'contact' %}">Contact us</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+        <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-parallax"></div>
+    <div class="container hero-content">
+      <h1 class="headline">Spark <span>Ideas </span>.<br>Build <span>Tomorrow</span>.</h1>
+      <p class="tagline">We craft visionary digital journeys that ignite brands and shape future possibilities.</p>
+      <a href="#contact" class="cta-btn">Start Your Project</a>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <div class="container about-container">
+      <div class="about-text">
+        <h2>About Novaro Systems</h2>
+        <p>We are a team of creative tech professionals dedicated to delivering smart, modern solutions. From websites to data insights and digital design, we combine innovation with strategy. Our collaborative approach ensures every project aligns with your goals—driving growth through customized, impactful digital experiences that truly make a difference.</p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="About Us">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>AI Solutions</h3>
+          <p>Delivering smart automation and intelligent systems for modern businesses.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Data Analytics</h3>
+          <p>Turning complex data into simple, actionable insights.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-code"></i>
+          <h3>Web Development</h3>
+          <p>Building fast, responsive websites tailored to your goals.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-rocket"></i>
+          <h3>Data Management</h3>
+          <p>Organizing and securing data for efficiency and clarity.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Business Analytics</h3>
+          <p>Driving growth through strategic, data-backed decision-making.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-search"></i>
+          <h3>Digital Marketing</h3>
+          <p>Boosting visibility with targeted, result-driven campaigns.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-video"></i>
+          <h3>Video Editing</h3>
+          <p>Creating engaging, high-quality videos that tell your story.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-cloud"></i>
+          <h3>Graphic Design</h3>
+          <p>Designing bold visuals that capture attention and build identity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="container">
+      <h2>Our Work</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="AI Solutions">
+          <button style="width:56px; height:56px; display: flex; align-items: center; justify-content: center; background: transparent; color: #fff; border: 2px solid #fff; border-radius: 50%; padding: 0; font-size: 22px; cursor: pointer; transition: background 0.2s, transform 0.2s; position: absolute; left: 16px; bottom: 16px; box-shadow: 0 4px 16px rgba(25,186,164,0.18); backdrop-filter: blur(8px);" onmouseover="this.style.background='rgba(25,186,164,0.15)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
+            <i class="fas fa-link" style="font-size: 22px; color: #fff;"></i>
+          </button>
+        </div>
+        <div class="portfolio-item" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Data Analytics">
+          <button style="width:56px; height:56px; display: flex; align-items: center; justify-content: center; background: transparent; color: #fff; border: 2px solid #fff; border-radius: 50%; padding: 0; font-size: 22px; cursor: pointer; transition: background 0.2s, transform 0.2s; position: absolute; left: 16px; bottom: 16px; box-shadow: 0 4px 16px rgba(25,186,164,0.18); backdrop-filter: blur(8px);" onmouseover="this.style.background='rgba(25,186,164,0.15)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
+            <i class="fas fa-link" style="font-size: 22px; color: #fff;"></i>
+          </button>
+        </div>
+        <div class="portfolio-item" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3fdc?auto=format&fit=crop&w=400&q=80" alt="Web Development">
+          <button style="width:56px; height:56px; display: flex; align-items: center; justify-content: center; background: transparent; color: #fff; border: 2px solid #fff; border-radius: 50%; padding: 0; font-size: 22px; cursor: pointer; transition: background 0.2s, transform 0.2s; position: absolute; left: 16px; bottom: 16px; box-shadow: 0 4px 16px rgba(25,186,164,0.18); backdrop-filter: blur(8px);" onmouseover="this.style.background='rgba(25,186,164,0.15)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
+            <i class="fas fa-link" style="font-size: 22px; color: #fff;"></i>
+          </button>
+        </div>
+        <div class="portfolio-item" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Data Management">
+          <button style="width:56px; height:56px; display: flex; align-items: center; justify-content: center; background: transparent; color: #fff; border: 2px solid #fff; border-radius: 50%; padding: 0; font-size: 22px; cursor: pointer; transition: background 0.2s, transform 0.2s; position: absolute; left: 16px; bottom: 16px; box-shadow: 0 4px 16px rgba(25,186,164,0.18); backdrop-filter: blur(8px);" onmouseover="this.style.background='rgba(25,186,164,0.15)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
+            <i class="fas fa-link" style="font-size: 22px; color: #fff;"></i>
+          </button>
+        </div>
+        <div class="portfolio-item" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Business Analytics">
+          <button style="width:56px; height:56px; display: flex; align-items: center; justify-content: center; background: transparent; color: #fff; border: 2px solid #fff; border-radius: 50%; padding: 0; font-size: 22px; cursor: pointer; transition: background 0.2s, transform 0.2s; position: absolute; left: 16px; bottom: 16px; box-shadow: 0 4px 16px rgba(25,186,164,0.18); backdrop-filter: blur(8px);" onmouseover="this.style.background='rgba(25,186,164,0.15)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
+            <i class="fas fa-link" style="font-size: 22px; color: #fff;"></i>
+          </button>
+        </div>
+        <div class="portfolio-item" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Digital Marketing">
+          <button style="width:56px; height:56px; display: flex; align-items: center; justify-content: center; background: transparent; color: #fff; border: 2px solid #fff; border-radius: 50%; padding: 0; font-size: 22px; cursor: pointer; transition: background 0.2s, transform 0.2s; position: absolute; left: 16px; bottom: 16px; box-shadow: 0 4px 16px rgba(25,186,164,0.18); backdrop-filter: blur(8px);" onmouseover="this.style.background='rgba(25,186,164,0.15)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
+            <i class="fas fa-link" style="font-size: 22px; color: #fff;"></i>
+          </button>
+        </div>
+        <div class="portfolio-item" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Video Editing">
+          <button style="width:56px; height:56px; display: flex; align-items: center; justify-content: center; background: transparent; color: #fff; border: 2px solid #fff; border-radius: 50%; padding: 0; font-size: 22px; cursor: pointer; transition: background 0.2s, transform 0.2s; position: absolute; left: 16px; bottom: 16px; box-shadow: 0 4px 16px rgba(25,186,164,0.18); backdrop-filter: blur(8px);" onmouseover="this.style.background='rgba(25,186,164,0.15)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
+            <i class="fas fa-link" style="font-size: 22px; color: #fff;"></i>
+          </button>
+        </div>
+        <div class="portfolio-item" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Graphic Design">
+          <button style="width:56px; height:56px; display: flex; align-items: center; justify-content: center; background: transparent; color: #fff; border: 2px solid #fff; border-radius: 50%; padding: 0; font-size: 22px; cursor: pointer; transition: background 0.2s, transform 0.2s; position: absolute; left: 16px; bottom: 16px; box-shadow: 0 4px 16px rgba(25,186,164,0.18); backdrop-filter: blur(8px);" onmouseover="this.style.background='rgba(25,186,164,0.15)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
+            <i class="fas fa-link" style="font-size: 22px; color: #fff;"></i>
+          </button>
+        </div>
+        <div class="portfolio-item" style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Project 9">
+          <button style="width:56px; height:56px; display: flex; align-items: center; justify-content: center; background: transparent; color: #fff; border: 2px solid #fff; border-radius: 50%; padding: 0; font-size: 22px; cursor: pointer; transition: background 0.2s, transform 0.2s; position: absolute; left: 16px; bottom: 16px; box-shadow: 0 4px 16px rgba(25,186,164,0.18); backdrop-filter: blur(8px);" onmouseover="this.style.background='rgba(25,186,164,0.15)'; this.style.transform='scale(1.08)'" onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
+            <i class="fas fa-link" style="font-size: 22px; color: #fff;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial-slide active">
+          <p>"TeamNovaro totally changed our brand vibe – these guys are awesome!"</p>
+          <span>- Hamza A.</span>
+        </div>
+        <div class="testimonial-slide">
+          <p>"Super creative, always on point. They're our digital fam now!"</p>
+          <span>- Sana F.</span>
+        </div>
+        <div class="testimonial-slide">
+          <p>"Their designs? Next level. Service? Can't beat it. Loved working with 'em!"</p>
+          <span>- Rasha Y., Marketing Lead</span>
+        </div>
+        <div class="testimonial-slide">
+          <p>"Novaro Systems delivered our project ahead of schedule and exceeded expectations. Highly recommend!"</p>
+          <span>- John Miller</span>
+        </div>
+        <div class="testimonial-slide">
+          <p>"Fantastic team to work with. Communication was clear and results were outstanding."</p>
+          <span>- Emily Johnson</span>
+        </div>
+        <div class="testimonial-slide">
+          <p>"They brought our vision to life with creativity and professionalism. Will hire again!"</p>
+          <span>- Michael Smith</span>
+        </div>
+        <div class="testimonial-slide">
+          <p>"From start to finish, Novaro Systems made the process easy and enjoyable. Five stars!"</p>
+          <span>- Jessica Brown</span>
+        </div>
+        <div class="testimonial-slide">
+          <p>"Their technical expertise and attention to detail set them apart from the rest."</p>
+          <span>- David Williams</span>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-container">
+      <div class="contact-form">
+        <h2>Contact us</h2>
+        {% comment %} <form>
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Message" required style="resize: none; height: 200px; max-height: 200px; min-height: 200px; overflow-y: auto;"></textarea>
+          <button type="submit" class="cta-btn">Submit</button>
+          <p style="text-align: center; margin: 15px 0; color: #666; font-size: 14px;">Or connect with us directly</p>
+          <div style="display: flex; align-items: center; justify-content: center; margin-top: 10px;">
+            <a href="https://wa.me/your-phone-number" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; background: #19baa4; color: black; text-decoration: none; padding: 12px 24px; border-radius: 25px; font-weight: 600; font-size: 16px; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); box-shadow: 0 4px 12px rgba(25, 186, 164, 0.3); gap: 8px; cursor: pointer;" onmouseover="this.style.transform='translateY(-2px) scale(1.04)'; this.style.background='#0c7864'; this.style.color='white'; this.style.boxShadow='0 6px 20px rgba(25, 186, 164, 0.4)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='#19baa4'; this.style.color='black'; this.style.boxShadow='0 4px 12px rgba(25, 186, 164, 0.3)'">
+              <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
+              <span>Chat with us</span>
+            </a>
+          </div>
+        </form> {% endcomment %}
+
+        <form method="post" action="">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message" required style="resize: none; height: 200px; max-height: 200px; min-height: 200px; overflow-y: auto;"></textarea>
+    <button type="submit" class="cta-btn">Submit</button>
+    <p style="text-align: center; margin: 15px 0; color: #666; font-size: 14px;">Or connect with us directly</p>
+    <div style="display: flex; align-items: center; justify-content: center; margin-top: 10px;">
+        <a href="https://wa.me/your-phone-number" target="_blank"
+           style="display: inline-flex; align-items: center; justify-content: center; background: #19baa4; color: black; text-decoration: none; padding: 12px 24px; border-radius: 25px; font-weight: 600; font-size: 16px; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); box-shadow: 0 4px 12px rgba(25, 186, 164, 0.3); gap: 8px; cursor: pointer;"
+           onmouseover="this.style.transform='translateY(-2px) scale(1.04)'; this.style.background='#0c7864'; this.style.color='white'; this.style.boxShadow='0 6px 20px rgba(25, 186, 164, 0.4)'"
+           onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='#19baa4'; this.style.color='black'; this.style.boxShadow='0 4px 12px rgba(25, 186, 164, 0.3)'">
+            <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
+            <span>Chat with us</span>
+        </a>
+    </div>
+</form>
+
+      </div>
+      <div class="contact-map">
+        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=600&q=80" alt="Contact Illustration" style="width:100%; height:100%; border:0; border-radius:16px; object-fit:cover; display:block;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61578110485255" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/NovaroSystems" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/novaro-systems-688954372/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/novarosystems/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/novaro-systems" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.tiktok.com/@novarosystems" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-upwork"></i></a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 novaroSystems. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html> 

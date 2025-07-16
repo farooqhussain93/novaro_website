@@ -1,0 +1,98 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/script.js' %}"></script>
+<img src="{% static 'images/Logo' %}" alt="Logo">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About us | Novaro Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo"><img src="/static/images/logo.png" alt="Agency Logo" style="height:100px; width:auto; display:block;"></div>
+      <button class="hamburger" aria-label="Open navigation" style="display:none;"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About us</a></li>
+        <li><a href="{% url 'contact' %}">Contact us</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+        <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="about-section" style="padding-top:7rem;">
+    <div class="container about-container">
+      <div class="about-text">
+        <h2>About Novaro Systems</h2>
+        <p>We are a team of creative tech professionals dedicated to delivering smart, modern solutions. From websites to data insights and digital design, we combine innovation with strategy. Our collaborative approach ensures every project aligns with your goals—driving growth through customized, impactful digital experiences that truly make a difference.</p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="About Us">
+      </div>
+    </div>
+  </section>
+  <section class="container" style="padding: 4rem 0;">
+    <h2 style="color: var(--accent);">Our Team</h2>
+    <div style="display: flex; gap: 2rem; flex-wrap: nowrap; justify-content: center; overflow-x: auto;">
+      <!-- New Team Member Card: David Kim (moved to top) -->
+      <div style="background: rgba(24,28,31,0.35); border-radius: 16px; padding: 2rem 1.5rem; text-align: center; width: 220px; box-shadow: 0 2px 16px #00e5ff11; backdrop-filter: blur(12px);">
+        <img src="/static/images/Farooq_img.jpg" alt="Farooq Hussain" style="width:80px; border-radius:50%; margin-bottom:1rem; margin-bottom:1rem; object-fit:cover; object-position:center;">
+        <h3 style="margin:0;">Farooq Hussain</h3>
+        <p style="color:var(--accent); margin:0;">CEO</p>
+      </div>
+      <div style="background: rgba(24,28,31,0.35); border-radius: 16px; padding: 2rem 1.5rem; text-align: center; width: 220px; box-shadow: 0 2px 16px #00e5ff11; backdrop-filter: blur(12px);">
+        <img src="/static/images/Nauman_img.jpg" alt="Nauman Raza" style="width:80px; height:80px; border-radius:50%; margin-bottom:1rem; object-fit:cover; object-position:center;">
+        <h3 style="margin:0;">Nauman Raza</h3>
+        <p style="color:var(--accent); margin:0;">Finance Manager</p>
+      </div>
+      <div style="background: rgba(24,28,31,0.35); border-radius: 16px; padding: 2rem 1.5rem; text-align: center; width: 220px; box-shadow: 0 2px 16px #00e5ff11; backdrop-filter: blur(12px);">
+        <img src="/static/images/Yousha_img.jpg" alt="Yousha Farooq" style="width:80px; height:80px; border-radius:50%; margin-bottom:1rem; object-fit:cover; object-position:center;">
+        <h3 style="margin:0;">Yousha Farooq</h3>
+        <p style="color:var(--accent); margin:0;">Web & Mobile App Developer</p>
+      </div>
+      <div style="background: rgba(24,28,31,0.35); border-radius: 16px; padding: 2rem 1.5rem; text-align: center; width: 220px; box-shadow: 0 2px 16px #00e5ff11; backdrop-filter: blur(12px);">
+        <img src="/static/images/Murtaza_img.jpg" alt="G.Murtaza" style="width:80px; height:80px; border-radius:50%; margin-bottom:1rem; object-fit:cover; object-position:center;">
+        <h3 style="margin:0;">G. Murtaza</h3>
+        <p style="color:var(--accent); margin:0;">Data Scientist</p>
+      </div>
+      <div style="background: rgba(24,28,31,0.35); border-radius: 16px; padding: 2rem 1.5rem; text-align: center; width: 220px; box-shadow: 0 2px 16px #00e5ff11; backdrop-filter: blur(12px);">
+        <img src="/static/images//Mustafa_img.jpg" alt="G. Mustafa" style="width:80px; height:80px; border-radius:50%; margin-bottom:1rem; object-fit:cover; object-position:center;">
+        <h3 style="margin:0;">G. Mustafa</h3>
+        <p style="color:var(--accent); margin:0;">Marketing Manager</p>
+      </div>
+    </div>
+  </section>
+  <section class="container" style="padding: 2rem 0 4rem 0; text-align: center;">
+    <h2>Our Mission</h2>
+    <p>To empower brands with creative, futuristic, and impactful digital solutions that drive success in a rapidly evolving world.</p>
+  </section>
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61578110485255" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/NovaroSystems" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/novaro-systems-688954372/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/novarosystems/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/novaro-systems" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.tiktok.com/@novarosystems" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-upwork"></i></a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 NOVAROSYSTEMS. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 

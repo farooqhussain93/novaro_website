@@ -1,0 +1,109 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/script.js' %}"></script>
+<img src="{% static 'images/Logo' %}" alt="Logo">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us | Novaro Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo"><img src="/static/images/logo.png" alt="Agency Logo" style="height:100px; width:auto; display:block;"></div>
+      <button class="hamburger" aria-label="Open navigation" style="display:none;"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About us</a></li>
+        <li><a href="{% url 'contact' %}">Contact us</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+        <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="contact" class="contact-section">
+    <div class="container contact-container">
+      <div class="contact-form">
+
+        {% if success %}
+          <p style="color: #19baa4;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  animation: fadeIn 1s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}">
+            Thank you! Your message was sent successfully.
+          </p>
+        {% endif %}
+
+        <h2>Contact us</h2>
+        {% comment %} <form>
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Message" required style="resize: none; height: 200px; max-height: 200px; min-height: 200px; overflow-y: auto;"></textarea>
+          <button type="submit" class="cta-btn">Submit</button>
+          <p style="text-align: center; margin: 15px 0; color: #666; font-size: 14px;">Or connect with us directly</p>
+          <div style="display: flex; align-items: center; justify-content: center; margin-top: 10px;">
+            <a href="https://wa.me/your-phone-number" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; background: #19baa4; color: black; text-decoration: none; padding: 12px 24px; border-radius: 25px; font-weight: 600; font-size: 16px; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); box-shadow: 0 4px 12px rgba(25, 186, 164, 0.3); gap: 8px; cursor: pointer;" onmouseover="this.style.transform='translateY(-2px) scale(1.04)'; this.style.background='#0c7864'; this.style.color='white'; this.style.boxShadow='0 6px 20px rgba(25, 186, 164, 0.4)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='#19baa4'; this.style.color='black'; this.style.boxShadow='0 4px 12px rgba(25, 186, 164, 0.3)'">
+              <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
+              <span>Chat with us</span>
+            </a>
+          </div>
+        </form> {% endcomment %}
+        <form method="post" action="">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message" required style="resize: none; height: 200px; max-height: 200px; min-height: 200px; overflow-y: auto;"></textarea>
+    <button type="submit" class="cta-btn">Submit</button>
+    <p style="text-align: center; margin: 15px 0; color: #666; font-size: 14px;">Or connect with us directly</p>
+    <div style="display: flex; align-items: center; justify-content: center; margin-top: 10px;">
+        <a href="https://wa.me/your-phone-number" target="_blank"
+           style="display: inline-flex; align-items: center; justify-content: center; background: #19baa4; color: black; text-decoration: none; padding: 12px 24px; border-radius: 25px; font-weight: 600; font-size: 16px; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); box-shadow: 0 4px 12px rgba(25, 186, 164, 0.3); gap: 8px; cursor: pointer;"
+           onmouseover="this.style.transform='translateY(-2px) scale(1.04)'; this.style.background='#0c7864'; this.style.color='white'; this.style.boxShadow='0 6px 20px rgba(25, 186, 164, 0.4)'"
+           onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='#19baa4'; this.style.color='black'; this.style.boxShadow='0 4px 12px rgba(25, 186, 164, 0.3)'">
+            <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
+            <span>Chat with us</span>
+        </a>
+    </div>
+</form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61578110485255" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/NovaroSystems" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/novaro-systems-688954372/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/novarosystems/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/novaro-systems" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.tiktok.com/@novarosystems" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-upwork"></i></a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 NOVAROSYSTEMS. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 

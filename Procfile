@@ -1,0 +1,1 @@
+web: gunicorn novaro_website.wsgi
