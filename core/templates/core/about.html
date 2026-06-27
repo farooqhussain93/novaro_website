@@ -1,0 +1,65 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}About Us | Novaro Systems{% endblock %}
+
+{% block content %}
+
+<!-- About Section -->
+<section class="about-section" style="padding-top:7rem;">
+  <div class="container about-container">
+    <div class="about-text">
+      <h2>About Novaro Systems</h2>
+      <p>We are a team of creative tech professionals dedicated to delivering smart, modern solutions. From websites to data insights and digital design, we combine innovation with strategy. Our collaborative approach ensures every project aligns with your goals—driving growth through customized, impactful digital experiences that truly make a difference.</p>
+    </div>
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="About Novaro Systems">
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="container" style="padding:4rem 0;">
+  <h2 style="color:var(--accent);">Our Team</h2>
+
+  <div style="display:flex; gap:2rem; flex-wrap:nowrap; justify-content:center; overflow-x:auto;">
+    <div style="background:rgba(24,28,31,0.35); border-radius:16px; padding:2rem 1.5rem; text-align:center; width:220px; box-shadow:0 2px 16px #00e5ff11; backdrop-filter:blur(12px);">
+      <img src="{% static 'core/images/Farooq_img.jpg' %}" alt="Farooq Hussain" style="width:80px; height:80px; border-radius:50%; margin-bottom:1rem; object-fit:cover; object-position:center;">
+      <h3 style="margin:0;">Farooq Hussain</h3>
+      <p style="color:var(--accent); margin:0;">CEO</p>
+    </div>
+
+    <div style="background:rgba(24,28,31,0.35); border-radius:16px; padding:2rem 1.5rem; text-align:center; width:220px; box-shadow:0 2px 16px #00e5ff11; backdrop-filter:blur(12px);">
+      <img src="{% static 'core/images/Nauman_img.jpg' %}" alt="Nauman Raza" style="width:80px; height:80px; border-radius:50%; margin-bottom:1rem; object-fit:cover; object-position:center;">
+      <h3 style="margin:0;">Nauman Raza</h3>
+      <p style="color:var(--accent); margin:0;">Finance Manager</p>
+    </div>
+
+    <div style="background:rgba(24,28,31,0.35); border-radius:16px; padding:2rem 1.5rem; text-align:center; width:220px; box-shadow:0 2px 16px #00e5ff11; backdrop-filter:blur(12px);">
+      <img src="{% static 'core/images/Yousha_img.jpg' %}" alt="Yousha Farooq" style="width:80px; height:80px; border-radius:50%; margin-bottom:1rem; object-fit:cover; object-position:center;">
+      <h3 style="margin:0;">Yousha Farooq</h3>
+      <p style="color:var(--accent); margin:0;">Web & Mobile App Developer</p>
+    </div>
+
+    <div style="background:rgba(24,28,31,0.35); border-radius:16px; padding:2rem 1.5rem; text-align:center; width:220px; box-shadow:0 2px 16px #00e5ff11; backdrop-filter:blur(12px);">
+      <img src="{% static 'core/images/Murtaza_img.JPG' %}" alt="G. Murtaza" style="width:80px; height:80px; border-radius:50%; margin-bottom:1rem; object-fit:cover; object-position:center;">
+      <h3 style="margin:0;">G. Murtaza</h3>
+      <p style="color:var(--accent); margin:0;">Data Scientist</p>
+    </div>
+
+    <div style="background:rgba(24,28,31,0.35); border-radius:16px; padding:2rem 1.5rem; text-align:center; width:220px; box-shadow:0 2px 16px #00e5ff11; backdrop-filter:blur(12px);">
+      <img src="{% static 'core/images/Mustafa_img.jpg' %}" alt="G. Mustafa" style="width:80px; height:80px; border-radius:50%; margin-bottom:1rem; object-fit:cover; object-position:center;">
+      <h3 style="margin:0;">G. Mustafa</h3>
+      <p style="color:var(--accent); margin:0;">Marketing Manager</p>
+    </div>
+  </div>
+</section>
+
+<!-- Mission Section -->
+<section class="container" style="padding:2rem 0 4rem 0; text-align:center;">
+  <h2>Our Mission</h2>
+  <p>To empower brands with creative, futuristic, and impactful digital solutions that drive success in a rapidly evolving world.</p>
+</section>
+
+{% endblock %}
